@@ -33,7 +33,7 @@ body,html{background:black; color:white; font-family:'Roboto', sans-serif; margi
     var checkoutButton = document.getElementById('checkout-button');
     checkoutButton.addEventListener('click', function () {
       // Créez une nouvelle session de paiement.
-      fetch('/create-checkout-session', {
+      fetch('/.netlify/functions/create-checkout-session', {
         method: 'POST',
       })
       .then(function(response) {
