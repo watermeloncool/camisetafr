@@ -25,5 +25,34 @@ body,html{background:black; color:white; font-family:'Roboto', sans-serif; margi
 <div id="pagenotfound">Test</div>
 <button id="checkout-button">Acheter maintenant</button>
 
+
+
+<script>
+    var stripe = Stripe('pk_test_51IROUPG4DSsnh5hVGaOF99OVHLNE7bLRuvIRk3WeF9T0ekyw9uRZVABJFG3R3qEHprVOPlZ4g7jW72RTazvHfrgI004s23aL0k');
+    
+    var checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.addEventListener('click', function () {
+      // Créez une nouvelle session de paiement.
+      fetch('/create-checkout-session', {
+        method: 'POST',
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(session) {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+      })
+      .then(function(result) {
+        if (result.error) {
+          // Affichez l'erreur au client
+          alert(result.error.message);
+        }
+      })
+      .catch(function(error) {
+        console.error('Error:', error);
+      });
+    });
+    </script>
+
 </body>
 </html>
