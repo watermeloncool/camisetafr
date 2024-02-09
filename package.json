@@ -10,6 +10,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "stripe": "^13.0.0",
-    "@netlify/functions": "^0.10.0" // Ajoutez cette ligne
+    "@netlify/functions": "^0.10.0"
   }
 }
