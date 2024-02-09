@@ -8,7 +8,7 @@
   "author": "Votre nom ou votre organisation",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1", // Si vous utilisez Express dans vos fonctions
+    "express": "^4.17.1",
     "stripe": "^13.0.0"
   }
 }

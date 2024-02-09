@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app';
+const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
