@@ -1,0 +1,116 @@
+/* import police (doit être au début) ------------------------- */
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* variables ------------------------------------------------- */
+:root {
+    --dark: rgb(25, 25, 27);
+    --dark1: rgb(20, 20, 22);
+    --dark2: rgb(15, 15, 17);
+    --grey: rgb(150, 150, 152);
+    --blue: rgb(0, 115, 255);
+    --green: rgb(120, 255, 210);
+  }
+
+/* global ------------------------------------------------- */
+body,html{ background: var(--dark) ; color:white; font-family:'Roboto', Helvetica, Arial, sans-serif; font-size:18px; font-weight:400; scroll-behavior: smooth; margin:0; padding:0;}
+a{color:white; text-decoration:none; }
+.titre1{font-size:40px; font-weight:700; padding:0 0 20px 0; line-height: 130%; }
+.titre2{font-size:28px; font-weight:700; padding:66px 0 20px 0; line-height: 130%; }
+input, select, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; border:0; margin:0; font-family:'Roboto', Helvetica, Arial, sans-serif; font-size:18px; padding:13px 20px; box-sizing: border-box; border-radius:12px; background:white; color: var(--dark); font-weight:400;}
+select {cursor:pointer;}
+::placeholder {color: var(--grey);}
+.btn{ font-weight:700; display:inline-block; padding:13px 20px; background:white; color:var(--dark); border-radius:12px; cursor:pointer; }
+.btn:hover{opacity:0.7;}
+.feedback{display:none; box-sizing: border-box; font-weight:500; padding:13px 20px; background:var(--green); color: var(--dark); border-radius:12px;}
+
+/* header ------------------------------------------------- */
+#logo{width:30px; padding:25px; position:absolute; }
+#top{padding-top:29px; padding-left:65px; font-weight:500; }
+#introtexte{width:35%; padding:17vh 0 0 10%; display:inline-block; }
+.titre{display:none; font-size:60px; font-size:4.5vw; font-weight:700; width: max-content;  animation: fadeinout 2.5s linear forwards; }
+@keyframes fadeinout {0% {opacity: 0;} 50% {opacity: 1;} 75% {opacity: 1;} 100% {opacity: 0;}}
+.titre:first-of-type {display: block;}
+.soustitre{line-height: 155%; max-width:505px; padding-top:30px; padding-bottom:40px; color: var(--grey); }
+#image{display:inline-block;vertical-align:top; position:absolute; left:55%; top:110px; top:16vh;  width:35%; }
+
+/* corps --------------------------------------------------- */
+#corps{padding: 22vh 0 0 10%; width:700px; max-width:80%; /*padding-left:calc(50% - 350px);*/ }
+.texte{color: var(--grey); line-height: 155%; }
+li{line-height: 155%; color: var(--grey); }
+ul li b{color:white;}
+ul {padding-top:0px; margin-top:0px; padding-bottom:50px;}
+
+/* reassurance --------------------------------------------- */
+#reassurance{padding:50px 0 0 50px; font-size:25px; font-weight:500; }
+#reassurance img{width:30px; vertical-align:middle; padding:10px 15px 10px 0;  }
+
+/* contact ----------------------------------------------- */
+#contact{  padding: 50px 0 60px 10%; background:var(--dark); }
+#contact img{width:30px; vertical-align:middle; padding:5px 20px 5px 0;}
+#contact .titre1{display:block;}
+#contact a{display:inline-block;}
+#contact div{display:inline-block;}
+
+/* calendrier --------------------------------------------- */
+#calendar{  padding: 50px 0 60px 10%; background:var(--dark1);  }
+#calendar img{width:30px; vertical-align:middle; padding:5px 20px 5px 0;}
+#calendar select, #calendar input {width:350px;display:block;margin-bottom:10px;}
+#calendar select { font-weight:600; border-right:solid 12px var(--grey);}
+#calendar .btn {font-weight:500; width:auto; background:var(--blue); color:white; }
+#calendar .feedback {width:350px; line-height: 155%;}
+
+/* formulaire de contact --------------------------------- */
+#form{  padding: 50px 0 60px 10%; background:var(--dark); }
+#form input, #form textarea { margin:0 10px 10px 0; }
+#form .prenom, #form .nom, #form .telephone, #form .email {width:345px;}
+#form .message {width:700px; height:200px; display:block;}
+#form .btn {font-weight:500; background:var(--blue); color:white;}
+#form .feedback {width:700px; line-height: 155%;}
+
+/* chat ---------------------------------------------------- */
+#chat {width:400px; max-height:100vh; padding:10px; position:fixed; right:0; bottom:0; box-sizing: border-box; overflow-y: auto; }
+#chat input {width:100%;}
+#chat .bubble1, #chat .bubble2 {width:280px; margin-bottom: 10px; font-weight:400; padding:13px 20px; color:var(--dark); border-radius:12px;}
+#chat .bubble1 {margin-left:0; background:white; }
+#chat .bubble2 {margin-left:60px; background:var(--green);  }
+
+/* bottom ------------------------------------------------ */
+#bottom{padding:50px 0 40px 10%; font-size:16px; color:var(--grey);}
+
+/* mobile ------------------------------------------------- */
+@media screen and (max-width: 850px) { 
+#introtexte{width:86%;padding:12vh 0 0 7%; display:block; text-align:center;}
+.titre{font-size:10vw;}
+.soustitre{max-width:none;}
+#introimage{display:block; padding-top:50px; margin-bottom:50px;}
+#image{position:static; width:80%; padding:7% 0 0 10%;}
+#corps{width:86%;padding:0 0 0 7%; max-width:86%;}
+.titre1{font-size:35px;}
+.titre2{font-size:25px;}
+#reassurance{padding-left:0%; font-size:21px;}
+#contact{padding:10% 7%;}
+#calendar{padding:10% 7%;}
+#calendar select, #calendar input, #calendar .btn, #calendar .feedback {width:100%;}
+#form{ padding: 10% 7%; }
+#form input, #form textarea{margin:0 0 10px 0; }
+#form .prenom, #form .nom, #form .telephone, #form .email, #form .btn, #form .feedback {width:100%;}
+#form .message {width:100%; height:200px; }
+#bottom{padding-left:7%;padding-top:55px;width:86%;text-align:center;}
+}
+
+
+/* background dégradé ------------------------------------------ */
+
+html {
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, var(--dark), var(--dark2));
+}

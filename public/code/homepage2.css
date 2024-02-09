@@ -1,0 +1,138 @@
+/* import police (doit être au début) ------------------------- */
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* variables ------------------------------------------------- */
+:root {
+    --dark: rgb(25, 25, 27);
+    --dark1: rgb(20, 20, 22);
+    --dark2: rgb(15, 15, 17);
+    --grey0: rgb(50, 50, 52);
+    --grey: rgb(200, 200, 202);
+    --grey1: rgb(75, 75, 77);
+    --grey2: rgb(100, 100, 102);
+    --blue: rgb(0, 115, 255);
+    --green: rgb(120, 255, 210);
+  }
+
+/* global ------------------------------------------------- */
+body,html{ background: var(--dark1) ; color:white; font-family:'Roboto', Helvetica, Arial, sans-serif; font-size:15px; font-weight:700; scroll-behavior: smooth; margin:0; padding:0; line-height: 155%;}
+a{color:white; text-decoration:none; }
+input, select, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; border:0; margin:0; font-family:'Roboto', Helvetica, Arial, sans-serif; padding:10px 15px; box-sizing: border-box; border-radius:10px; background:white; color: var(--dark); font-size:16px; font-weight:700;}
+select {cursor:pointer;}
+::placeholder {color: grey;}
+.btn{ background:var(--blue); color:white; border-radius:20px; cursor:pointer; line-height: 100%; text-align:center; font-size:16px; padding: 12px 0; }
+.btn:hover{background:white; color:black; cursor:pointer; }
+.feedback{display:none; box-sizing: border-box; padding:13px 20px; background:var(--green); color: var(--dark); border-radius:12px;}
+.opacite {opacity:0.35;}
+
+/* menu ----------------------------------------------------- */
+#menu {z-index:100; width:100%; top:0; left:0; text-align:center; line-height: 100%; background:black;  }
+#menu img {height:25px; padding:10px 15px; vertical-align:middle;}
+#menupc div:hover, #sousmenumobile div:hover{color:var(--blue); cursor:pointer;}
+#menupc div {display:inline-block; padding:25px 15px; vertical-align:middle;  }
+#menumobile, #sousmenumobile {display:none;}
+#sousmenumobile {padding:40px 40px; text-align:left; height:100vh;}
+#sousmenumobile div {padding:20px 0;font-size:30px;  color:white;}
+#close {display:none}
+
+/* lead ------------------------------------------------- */
+#lead {position:relative; width:1100px; text-align:center; margin:90px auto 100px auto; }
+#lead .titre{text-align:left; width:550px; font-size:60px; line-height: 110%;  }
+#lead .soustitre{text-align:left; width:550px; padding-top:30px; padding-bottom:40px; font-size:18px; font-weight:400; line-height: 155%; }
+#lead #image{ position:absolute; top:0; right:0; width:480px; display:inline-block; vertical-align:top; }
+#lead .form {width:350px; }
+/* #lead select {font-weight:500; display:block; width:100%; text-align:left; margin-bottom:10px; background:rgb(40,40,45); border:solid 1px rgb(100,100,105); color:white; border-right:solid 12px rgb(100,100,105);} */
+#lead .form .derouler {width:100%; background:rgb(50, 50, 55); margin-bottom:10px; padding:10px 0; border-radius:10px;}
+#lead .form .titre {vertical-align:middle; display:inline-block; text-align:left; width:300px; font-size:16px;}
+#lead .form .image {vertical-align:middle; display:inline-block; text-align:left; width:15px;}
+#lead .form .contenu {background:black; margin:10px 0;}
+#lead .form input {width:100%; margin-bottom:10px; padding: 12px 15px;}
+#lead .btn {width:100%; }
+#lead .cgv {display:block; margin:5px 0 0 0; font-size:12px; font-weight:500;}
+#lead .cgv a {text-decoration:underline;}
+#lead .form .contenu, #lead .form .cacher {display:none;}
+
+/* siteweb ------------------------------------------------ */
+#siteweb {width:100%; text-align:center; margin: 60px 0; }
+#siteweb .titre {text-align:center; font-size:55px; width:550px; margin:0 auto 50px auto; line-height: 110%;  }
+#siteweb .bloc {position:relative; display:inline-block; width:370px; margin:15px; border:solid 4px white; vertical-align:top; border-radius:15px; text-align:center;  }
+#siteweb .bloc .titre { margin:20px 0 30px 20px; width:200px; text-align:left; font-size:30px; line-height: 102%; }
+#siteweb .prix{position:absolute; top:0; right:0; display:inline-block; margin:20px; text-align:right; font-size:20px; }
+#siteweb ul{font-weight:500; margin:0 40px; padding:0; margin-right:20px; text-align:left; }
+#siteweb li{margin:7px 0;}
+#siteweb .cgv {margin:0 20px 20px 20px; font-size:12px; font-weight:500;}
+#siteweb .cgv a {text-decoration:underline;}
+#siteweb .btn {display:block; text-align:center; margin:30px 20px 10px 20px; font-size:16px; padding: 12px 0;}
+#siteweb .bloc:nth-of-type(2) {border-color:rgb(255, 210, 215);  }
+#siteweb .bloc:nth-of-type(2) .btn {background:rgb(255, 210, 215); color:black; }
+#siteweb .bloc:nth-of-type(3) {border-color:rgb(196, 177, 212);  }
+#siteweb .bloc:nth-of-type(3) .btn {background:rgb(196, 177, 212); color:black; }
+#siteweb .bloc:nth-of-type(4) {border-color:rgb(255, 200, 98);  }
+#siteweb .bloc:nth-of-type(4) .btn {background:rgb(255, 200, 98); color:black; }
+#siteweb .bloc .btn:hover {background-color:white; opacity:1; cursor:pointer;}
+
+/* dev ------------------------------------------------- */
+#dev {position:relative; width:1100px; text-align:left; margin:90px auto 100px auto; }
+#dev .titre{width:550px; font-size:60px; line-height: 110%;  }
+#dev .soustitre{width:550px; padding-top:30px; padding-bottom:40px; font-size:18px; font-weight:400; line-height: 155%; }
+#dev #image{ position:absolute; top:0; right:0; width:480px; display:inline-block; vertical-align:top; }
+#dev .btn {display:inline-block; padding-left:20px; padding-right:20px; }
+
+/* corps --------------------------------------------------- */
+#corps{padding:5% 10%;  }
+#corps .titre{font-size:28px; padding:60px 0 30px 0; max-width:700px; }
+#corps .texte{color: var(--grey); max-width:700px; }
+#corps .bloc {width:240px; margin:20px; display:inline-block; text-align:center; vertical-align:top;  }
+#corps .bloc img {height:80px; padding-bottom:10px; vertical-align:bottom; }
+#corps .bloc .soustitre {padding: 10px 0 10px 0; }
+#corps .bloc .texte {width:100%;}
+
+/* formulaire de contact --------------------------------- */
+#contact input, #contact select, #contact textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; border:0; margin:0; font-family:'Roboto', Helvetica, Arial, sans-serif; padding:10px 15px; box-sizing: border-box; border-radius:10px; background:white; color: var(--dark); font-size:15px; font-weight:700;}
+#contact {width:100%; text-align:center; padding-bottom:70px; }
+#contact .titre {font-size:28px; padding:60px 0 30px 0;}
+#form{ display:inline-block; }
+#form input, #form textarea { margin:0 10px 10px 0; }
+#form .prenom, #form .nom, #form .telephone, #form .email {width:345px; }
+#form .message {width:700px; height:200px; display:block;}
+#form .btn {}
+.feedback {width:700px;}
+
+/* footer ------------------------------------------------ */
+#footer{background:black; border:solid 1px black;  text-align:center; }
+#footer .bloc{display:inline-block; vertical-align:top; text-align:left; width:20%; padding:30px 0 30px 0; vertical-align:middle; text-align:center;}
+#footer b {color:white;}
+#footer a:hover,#footer .langue:hover{cursor:pointer; color:white;}
+#footer img {width:20px; padding-right:5px; vertical-align:middle;}
+
+/* copyright ----------------------------------------------- */
+#copyright { background:black; width:100%; padding:20px 0; text-align:center; line-height: 100%; }
+
+/* mobile ------------------------------------------------- */
+@media screen and (max-width: 850px) { 
+
+#menupc {display:none;}
+#menumobile {display:flex; justify-content: space-between;align-items: center; }
+#sousmenumobile {background:var(--dark2);}
+
+#intro{width:86%;padding:120px 0 0 7%; display:block; text-align:center;}
+#intro .titre{font-size:10vw;}
+#intro .soustitre{max-width:none;}
+#image{width:50%; padding-left:25%;}
+#corps{width:86%;padding:0 0 0 7%; max-width:86%;}
+.titre1{font-size:35px;}
+.titre2{font-size:25px;}
+#reassurance{padding-left:0%; font-size:21px;}
+#contact{padding:10% 7%;}
+#calendar{padding:10% 7%;}
+#calendar select, #calendar input, #calendar .btn, #calendar .feedback {width:100%;}
+#form{ padding: 10% 7%; }
+#form input, #form textarea{margin:0 0 10px 0; }
+#form .prenom, #form .nom, #form .telephone, #form .email, #form .btn, #form .feedback {width:100%;}
+#form .message {width:100%; height:200px; }
+#footer .bloc{width:30%; }
+
+}
+
+
