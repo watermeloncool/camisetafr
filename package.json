@@ -1,0 +1,14 @@
+{
+  "name": "mon-projet-netlify",
+  "version": "1.0.0",
+  "description": "Une implémentation Stripe intégrée à un site Netlify via des fonctions serverless",
+  "scripts": {
+    "test": "echo \"Erreur: aucun test spécifié\" && exit 1"
+  },
+  "author": "Votre nom ou votre organisation",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1", // Si vous utilisez Express dans vos fonctions
+    "stripe": "^13.0.0"
+  }
+}
