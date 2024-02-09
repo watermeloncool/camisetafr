@@ -33,6 +33,9 @@ exports.handler = async (event, context) => {
 
 */
 
+const { handler } = require("@netlify/functions");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
 
 exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST") {
