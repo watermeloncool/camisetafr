@@ -2,10 +2,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
 const app = express();
-
-// Middleware pour parser le corps de la requête en JSON
-app.use(express.json());
-
 app.use(express.static('public'));
 
 const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
@@ -13,7 +9,7 @@ const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [{
-      price: 'prod_PWstw04DRGi322',
+      price: 'price_1Ohp7bG4DSsnh5hVvBP27K1p',
       quantity: 1,
     }],
     mode: 'payment',
