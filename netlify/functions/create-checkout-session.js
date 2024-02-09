@@ -1,24 +1,30 @@
-// Assurez-vous d'installer les dépendances stripe et express via npm dans votre projet
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const express = require('express');
-const app = express();
-app.use(express.static('public'));
+// Importez la bibliothèque Netlify Functions
+const { handler } = require("@netlify/functions");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
+// Fonction handler pour Netlify
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
 
-app.post('/create-checkout-session', async (req, res) => {
-  const session = await stripe.checkout.sessions.create({
-    line_items: [{
-      price: 'price_1Ohp7bG4DSsnh5hVvBP27K1p',
-      quantity: 1,
-    }],
-    mode: 'payment',
-    success_url: `${YOUR_DOMAIN}/success.html`,
-    cancel_url: `${YOUR_DOMAIN}/cancel.html`,
-  });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      line_items: [{
+        price: 'price_1Ohp7bG4DSsnh5hVvBP27K1p',
+        quantity: 1,
+      }],
+      mode: 'payment',
+      success_url: `https://splendid-macaron-38db40.netlify.app/success.html`,
+      cancel_url: `https://splendid-macaron-38db40.netlify.app/cancel.html`,
+    });
 
-  res.redirect(303, session.url);
-});
-
-// Utilisez le port par défaut de Netlify pour les fonctions serverless
-app.listen(process.env.PORT || 4242, () => console.log('Server running'));
+    return {
+      statusCode: 303,
+      headers: { Location: session.url },
+      body: ""
+    };
+  } catch (error) {
+    return { statusCode: 500, body: error.toString() };
+  }
+};
