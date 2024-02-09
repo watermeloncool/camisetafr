@@ -22,33 +22,32 @@
 
 
     <script>
-      
       document.getElementById('checkout-button').addEventListener('click', async function(e) {
-  e.preventDefault();
-  var price = document.getElementById('priceInput').value;
-
-  try {
-    const response = await fetch('/.netlify/functions/create-checkout-session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ price: price }),
-    });
-
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(text);
-    }
-
-    const session = await response.json();
-    window.location.href = session.url;
-  } catch (error) {
-    console.error('Error:', error);
-  }
-});
-
+          e.preventDefault();
+          var price = document.getElementById('priceInput').value;
+      
+          try {
+              const response = await fetch('/.netlify/functions/create-checkout-session', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ price: price }),
+              });
+      
+              if (!response.ok) {
+                  const text = await response.text();
+                  throw new Error(text);
+              }
+      
+              const session = await response.json();
+              window.location.href = session.url;
+          } catch (error) {
+              console.error('Error:', error);
+          }
+      });
       </script>
+      
       
 
 
