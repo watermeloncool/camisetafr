@@ -1,58 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-
-<!-- META -->
-<meta charset="utf-8">
-<title>Watermelon - Test</title>
-<meta name="robots" content="noindex,nofollow">
-<meta name="description" id="description" property="description" content="Watermelon - Page Not Found">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-<script src="https://js.stripe.com/v3/"></script>
-
-<!-- STYLE -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-body,html{background:black; color:white; font-family:'Roboto', sans-serif; margin:0; padding:0;}
-#pagenotfound{width:100%; text-align:center; padding-top:47vh; font-weight:700; font-size: 30px;}
-
-</style>
-
-</head>
-<body>
-
-<div id="pagenotfound">Test</div>
-<button id="checkout-button">Acheter maintenant</button>
-
-
-
-<script>
-    var stripe = Stripe('pk_test_51IROUPG4DSsnh5hVGaOF99OVHLNE7bLRuvIRk3WeF9T0ekyw9uRZVABJFG3R3qEHprVOPlZ4g7jW72RTazvHfrgI004s23aL0k');
-    
-    var checkoutButton = document.getElementById('checkout-button');
-    checkoutButton.addEventListener('click', function () {
-      // Créez une nouvelle session de paiement.
-      fetch('/.netlify/functions/create-checkout-session', {
-        method: 'POST',
-      })
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(session) {
-        return stripe.redirectToCheckout({ sessionId: session.id });
-      })
-      .then(function(result) {
-        if (result.error) {
-          // Affichez l'erreur au client
-          alert(result.error.message);
-        }
-      })
-      .catch(function(error) {
-        console.error('Error:', error);
-      });
-    });
-    </script>
-
-</body>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <section>
+      <div class="product">
+        <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+          <h3>Stubborn Attachments</h3>
+          <h5>$20.00</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit" id="checkout-button">Checkout</button>
+      </form>
+    </section>
+  </body>
 </html>
