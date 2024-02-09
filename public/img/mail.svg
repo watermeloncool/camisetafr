@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 300 300" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<clipPath id="ArtboardFrame">
+<rect height="300" width="300" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Sans-titre">
+<path d="M44.7323 444.93L236.088 444.93C252.282 444.93 265.41 458.058 265.41 474.253L265.41 579.199C265.41 595.394 252.282 608.522 236.088 608.522L44.7323 608.522C28.538 608.522 15.4099 595.394 15.4099 579.199L15.4099 474.253C15.4099 458.058 28.538 444.93 44.7323 444.93Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="17"/>
+<path d="M94.5845 525.482L38.3961 586.022" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+<path d="M188.186 525.335C188.186 525.335 228.853 570.282 243.742 586.283" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+<path d="M38.1884 466.401L121.616 548.994C132.038 559.218 148.983 559.267 159.465 549.105L243.726 467.226" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+<path d="M54.2188 62.3438C33.33 62.3438 16.4063 79.2675 16.4062 100.156L16.4062 205.125C16.4062 226.014 33.33 242.937 54.2188 242.938L245.562 242.938C266.451 242.938 283.406 226.014 283.406 205.125L283.406 100.156C283.406 79.2675 266.451 62.3437 245.562 62.3438L54.2188 62.3438ZM47.625 84.8125C49.5444 84.8029 51.4657 85.5429 52.9375 87L136.344 169.562C143.861 176.937 156.165 176.949 163.719 169.625L248 87.75C250.971 84.8633 255.707 84.9356 258.594 87.9062C261.48 90.8768 261.408 95.6446 258.438 98.5312L206.094 149.375C210.851 154.616 233.56 179.641 233.688 179.781C244.856 192.049 253.527 201.514 258.719 207.094C261.54 210.126 261.376 214.866 258.344 217.688C255.311 220.509 250.572 220.345 247.75 217.312C242.51 211.681 233.798 202.182 222.594 189.875C222.468 189.736 200.524 165.525 195.344 159.812L174.156 180.406C160.753 193.401 139.163 193.347 125.812 180.25L105.844 160.5L53.375 217.031C50.5572 220.067 45.8173 220.255 42.7812 217.438C39.7452 214.62 39.5572 209.88 42.375 206.844L95.1875 149.906L42.4062 97.6562C39.4626 94.7421 39.4296 89.9749 42.3438 87.0312C43.8008 85.5594 45.7056 84.8221 47.625 84.8125Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>
