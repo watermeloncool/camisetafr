@@ -12,7 +12,7 @@
         <div class="description">
           <h3>Stubborn Attachments</h3>
           <!--h5>$20.00</h5-->
-          <input type="number" id="priceInput" name="price" min="1" placeholder="Enter price in USD">
+          <input type="number" id="priceInput" name="price" min="1" placeholder="Enter price in CHF">
         </div>
       </div>
       <form action="/.netlify/functions/create-checkout-session" method="POST">
@@ -22,6 +22,26 @@
 
 
     <script>
+
+
+document.getElementById('checkout-button').addEventListener('click', async function(e) {
+    e.preventDefault();
+    var price = document.getElementById('priceInput').value;
+
+    const response = await fetch('/.netlify/functions/create-checkout-session', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ price: price }),
+    });
+
+    const session = await response.json();
+    window.location.href = session.url;
+});
+
+
+      /*
       document.getElementById('checkout-button').addEventListener('click', async function(e) {
           e.preventDefault();
           var price = document.getElementById('priceInput').value;
@@ -46,6 +66,7 @@
               console.error('Error:', error);
           }
       });
+      */
       </script>
       
       
