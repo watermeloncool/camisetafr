@@ -9,7 +9,7 @@ const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [{
-      price: '{{PRICE_ID}}',
+      price: 'prod_PWstw04DRGi322',
       quantity: 1,
     }],
     mode: 'payment',
