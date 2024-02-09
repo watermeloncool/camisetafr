@@ -2,6 +2,10 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
 const app = express();
+
+// Middleware pour parser le corps de la requête en JSON
+app.use(express.json());
+
 app.use(express.static('public'));
 
 const YOUR_DOMAIN = 'https://splendid-macaron-38db40.netlify.app/';
